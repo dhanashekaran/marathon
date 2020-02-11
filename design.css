@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "banner banner"
+    "tamil-btn english-btn";
+  /* grid-template-columns: 1fr 1fr;
+  grid-template-rows: 500px 1fr; */
+}
+.banner {
+  grid-area: banner;
+  /* grid-column: 1/3;
+  grid-row: 1/2; */
+  background-image: url("banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.tamil-btn {
+  text-align: center;
+  grid-area: tamil-btn;
+  /* grid-column: 1/2;
+  grid-row: 2/3; */
+}
+.tamil-btn > a {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.english-btn {
+  grid-area: english-btn;
+  /* grid-column: 2/3;
+  grid-row: 2/3; */
+  text-align: center;
+}
+.english-btn > a {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 25px;
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-top: 10px;
+}
+@media screen and (max-width: 600px) {
+  body {
+    grid-template-areas:
+      "banner banner"
+      "tamil-btn tamil-btn"
+      "english-btn english-btn";
+  }
+  .english-btn {
+    align-self: start;
+  }
+  .tamil-btn {
+    align-self: center;
+  }
+}
